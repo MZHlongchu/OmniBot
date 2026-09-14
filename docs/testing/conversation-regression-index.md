@@ -710,4 +710,4 @@ Codex Plan 补验：用户指定模拟器验收，实际 UI 27 步（计划、�
 
 ## 0.6.3 DSH thinking toggle and idle configuration restart
 
-See [DSH reasoning acceptance](dsh-reasoning-0.6.3.md). Executable coverage: `AgentWebRuntimeTest`, `LocalAcpRuntimeConfigTest`, `scripts/verify-dsh-reasoning-wire.mjs`, and `scripts/verify-dsh-phone-reasoning.py`. Wire on/off and physical generation passed; final idle-edit restart is pending physical verification.
+See [DSH reasoning acceptance](dsh-reasoning-0.6.3.md). Executable coverage: `AgentWebRuntimeTest`, `LocalAcpRuntimeConfigTest`, `scripts/verify-dsh-reasoning-wire.mjs`, and `scripts/verify-dsh-phone-reasoning.py`. Wire on/off, physical generation, idle-edit restart, and post-restart Off/re-enabled High generation passed on PJE110 with final 0.6.3/code 16. A separately observed offline turn failed without automatic replay.

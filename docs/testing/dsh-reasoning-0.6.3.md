@@ -28,6 +28,8 @@ Device: OnePlus PJE110, serial b49f281b. Existing DSH 0.1.2-rc.1 with Pi 0.84.4.
 - `OOB_DSH_HIGH_063_C`: same-session UI High send completed; upstream journal contains nonempty reasoning and text, 111 output tokens.
 - Independent 0.6.3/code 16 APK installed successfully; the pre-persistence-fix restart reproduction above failed.
 - Final configuration persistence fix: all 29 focused JVM tests and APK build passed. APK SHA256 `691a24e021483a07281ba862781b3e56442ca81f5be99d2e15ca4379438e9a67` installed with data preserved (0.6.3/code 16). Agent-operated physical UI: selected Off, force-stopped before any send, reopened the same DSH session; after authoritative configuration loaded, it remained Off.
-- Post-restart `OOB_DSH_OFF_063_D` send failed with upstream `Connection error`; Android reported `Active default network: none`. Wi-Fi enabled but unconnected. No automatic send replay performed. Post-restart actual model output remains pending network restoration; this is not counted as a passing generation test.
+- Post-restart `OOB_DSH_OFF_063_D` send failed with upstream `Connection error`; Android reported `Active default network: none`. Wi-Fi enabled but unconnected. No automatic send replay performed. The failed request is not counted as a passing generation test. After the user restored network, a new explicitly sent case was used; the failed turn was not automatically replayed.
 
 No claim of all Provider/Harness coverage, production WSS, automatic remote catch-up, or original native Codex desktop GUI acceptance.
+
+Final-generation evidence: on the final 0.6.3/code 16 APK, `OOB_DSH_OFF_063_E` (turn 5) has text only after idle-Off/restart; `OOB_DSH_HIGH_063_F` (turn 6) has nonempty reasoning after re-enabling High. Both have exactly one user and one assistant record. See `artifacts/dsh-reasoning-0.6.3/phone-final.json`.
